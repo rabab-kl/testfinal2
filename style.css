@@ -1,0 +1,18 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #1c1c1c;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff3c00 !important;
+}
