@@ -34,3 +34,29 @@ document.addEventListener("DOMContentLoaded", function() {
 function subscribe() {
     alert("Thank you for subscribing! Your account will be activated shortly.");
 }
+document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('click', () => {
+        alert(`You selected: ${card.querySelector('h3').innerText}`);
+    });
+});
+const footer = document.querySelector("footer");
+
+const footerButton = document.createElement("button");
+const buttonText = document.createTextNode("Back to Top");
+footerButton.appendChild(buttonText);
+footerButton.classList.add("footer-btn");
+footerButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+footer.appendChild(footerButton);
+window.addEventListener("scroll", function() {
+    const footerButton = document.querySelector(".footer-btn");
+    if (window.scrollY > 200) {
+        footerButton.style.display = "block";
+    } else {
+        footerButton.style.display = "none";
+    }
+});
