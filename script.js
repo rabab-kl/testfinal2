@@ -30,3 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+function subscribe() {
+    alert("Thank you for subscribing! Your account will be activated shortly.");
+}
